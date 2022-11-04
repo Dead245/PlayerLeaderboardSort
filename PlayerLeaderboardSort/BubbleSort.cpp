@@ -3,5 +3,5 @@
 #include "BubbleSort.h"
 
 void BubbleSort() {
-	std::cout << "Bubble Sorted";
+	std::cout << "Bubble Sorted" << std::endl;
 }
