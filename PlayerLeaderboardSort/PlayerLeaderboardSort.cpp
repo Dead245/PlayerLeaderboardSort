@@ -7,8 +7,6 @@
 #include "SelectionSort.h"
 #include "BubbleSort.h"
 
-//#include "sortingMethods.h"
-
 void printMenu();
 void activateSort(int chosenSortMethod);
 
