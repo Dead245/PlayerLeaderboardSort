@@ -3,5 +3,5 @@
 #include "SelectionSort.h"
 
 void SelectionSort() {
-	std::cout << "Selection Sorted";
+	std::cout << "Selection Sorted" << std::endl;
 }
