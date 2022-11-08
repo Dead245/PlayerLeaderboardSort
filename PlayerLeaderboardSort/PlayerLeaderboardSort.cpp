@@ -6,20 +6,28 @@
 
 #include "SelectionSort.h"
 #include "BubbleSort.h"
+#include "InsertionSort.h"
+#include "QuickSort.h"
+#include "MergeSort.h"
+#include "CountingSort.h"
+#include "RadixSort.h"
+#include "BucketSort.h"
+#include "CombSort.h"
+#include "ShellSort.h"
 
 void printMenu();
 void activateSort(int chosenSortMethod);
 
 std::vector<std::string> sortTypeList = { "Selection Sort",
-                                              "Bubble Sort",
-                                              "Insertion Sort",
-                                              "Quick Sort",
-                                              "Merge Sort",
-                                              "Counting Sort",
-                                              "Radix Sort",
-                                              "Bucket Sort",
-                                              "Comb Sort",
-                                              "Shell Sort" };
+                                          "Bubble Sort",
+                                          "Insertion Sort",
+                                          "Quick Sort",
+                                          "Merge Sort",
+                                          "Counting Sort",
+                                          "Radix Sort",
+                                          "Bucket Sort",
+                                          "Comb Sort",
+                                          "Shell Sort" };
 
 int main()
 {
@@ -83,20 +91,28 @@ void activateSort(int chosenSortMethod) { //What is a better way to do this? Wha
         BubbleSort();
         break;
     case 3:
+        InsertionSort();
         break;
     case 4:
+        QuickSort();
         break;
     case 5:
+        MergeSort();
         break;
     case 6:
+        CountingSort();
         break;
     case 7:
+        RadixSort();
         break;
     case 8:
+        BucketSort();
         break;
     case 9:
+        CombSort();
         break;
     case 10:
+        ShellSort();
         break;
     }
     std::cout << "Sorting using " << sortTypeList[chosenSortMethod - 1] << "..." << std::endl;
