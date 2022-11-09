@@ -48,9 +48,26 @@ int main()
     while (!playersFile.eof()) {
         std::getline(playersFile, tempString);
         lineCount++;
-    }
+        
+        size_t firstWhitespace = tempString.find(' ');
+        size_t lastWhitespace = tempString.rfind(' ');
+        int playerID = stoi(tempString.substr(0, firstWhitespace));
+        int playerScore = stoi(tempString.substr(lastWhitespace + 1));
+        
+        //lastWhitespace changes due to if playerID gets larger, so have to substract firstWhitespace from it since that changes correctly, why? Also why do I have to subtract 5 afterwards too?
+        std::string playerName = tempString.substr(firstWhitespace + 3, lastWhitespace - firstWhitespace - 5);
+        std::pair<std::string, int > playerStats;
+        playerStats.first = playerName;
+        playerStats.second = playerScore;
 
-    //playersFile.clear();
+        playerMap[lineCount] = (playerID, playerStats);
+    }
+    //testing if the map works correctly and ways to print it
+    auto element = playerMap[87].first; //[#] is playerID | .first gives playerName | .second gives playerScore
+    auto element2 = playerMap.find(87);
+    std::cout << element;
+    std::cout << element2->first;       //have to use -> to access since .find() gives an iterator
+    
     playersFile.close();
 
     std::cout << "Player list Obtained." << std::endl
