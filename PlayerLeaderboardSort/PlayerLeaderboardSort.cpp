@@ -3,6 +3,7 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <unordered_map>
 
 #include "SelectionSort.h"
 #include "BubbleSort.h"
@@ -17,6 +18,8 @@
 
 void printMenu();
 void activateSort(int chosenSortMethod);
+
+std::unordered_map<int, std::pair<std::string,int>> playerMap; //int is playerID
 
 std::vector<std::string> sortTypeList = { "Selection Sort",
                                           "Bubble Sort",
@@ -39,7 +42,7 @@ int main()
         return 1;
     }
 
-    //Get line count of file
+    //Get line count of file and convert each line into a map<playerID,pair<"playerName",playerScore>>
     int lineCount = 0;
     std::string tempString;
     while (!playersFile.eof()) {
@@ -47,8 +50,8 @@ int main()
         lineCount++;
     }
 
-    playersFile.clear(); //Resets pointer to be back at the beginning of the file
-    playersFile.seekg(0);
+    //playersFile.clear();
+    playersFile.close();
 
     std::cout << "Player list Obtained." << std::endl
         << "The list has " << lineCount << " number of entries." << std::endl
@@ -66,7 +69,6 @@ int main()
 
     system("pause");
 
-    playersFile.close();
     return 0;
 }
 

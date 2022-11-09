@@ -1,7 +1,8 @@
 #include <iostream>
-
+#include <string>
+#include <fstream>
 #include "SelectionSort.h"
 
 void SelectionSort() {
-	std::cout << "Selection Sorted" << std::endl;
+	std::cout << "Sort Method called:" << std::endl;
 }
