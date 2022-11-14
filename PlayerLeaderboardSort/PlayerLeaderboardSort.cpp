@@ -15,6 +15,7 @@
 #include "BucketSort.h"
 #include "CombSort.h"
 #include "ShellSort.h"
+#include "TablePrint.h"
 
 void printMenu();
 void activateSort(int chosenSortMethod);
@@ -84,6 +85,8 @@ int main()
 
     activateSort(choice);
 
+    printTable(playerMap); //temp for testing table pritn function
+   
     system("pause");
 
     return 0;
