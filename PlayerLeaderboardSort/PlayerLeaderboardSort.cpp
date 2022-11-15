@@ -3,7 +3,7 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include <unordered_map>
+#include <map>
 
 #include "SelectionSort.h"
 #include "BubbleSort.h"
@@ -20,7 +20,7 @@
 void printMenu();
 void activateSort(int chosenSortMethod);
 
-std::unordered_map<int, std::pair<std::string,int>> playerMap; //int is playerID
+std::map<int, std::pair<std::string,int>> playerMap; //int is playerID
 
 std::vector<std::string> sortTypeList = { "Selection Sort",
                                           "Bubble Sort",
@@ -85,7 +85,7 @@ int main()
 
     activateSort(choice);
 
-    printTable(playerMap); //temp for testing table pritn function
+    printTable(playerMap); //temp for testing table print function
    
     system("pause");
 
