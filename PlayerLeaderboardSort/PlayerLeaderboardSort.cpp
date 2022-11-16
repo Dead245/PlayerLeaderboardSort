@@ -20,6 +20,7 @@
 void printMenu();
 void activateSort(int chosenSortMethod);
 
+std::vector<int> sortedKeys;
 std::unordered_map<int, std::pair<std::string,int>> playerMap; //int is playerID
 
 std::vector<std::string> sortTypeList = { "Selection Sort",
@@ -80,7 +81,7 @@ int main()
 
     activateSort(choice);
 
-    //printTable(playerMap); //temp for testing table print function
+    printTable(playerMap,sortedKeys);
    
     system("pause");
 
@@ -100,7 +101,7 @@ void activateSort(int chosenSortMethod) { //What is a better way to do this? Wha
         std::cout << "Bad Input.";
         return;
     }
-    std::vector<int> sortedKeys;
+    
     switch (chosenSortMethod) { //Activates corresponding sort method based on int input
     case 1:
         sortedKeys = SelectionSort(playerMap);

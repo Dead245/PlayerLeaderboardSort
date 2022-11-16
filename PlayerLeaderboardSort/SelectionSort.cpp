@@ -19,7 +19,7 @@ std::vector<int> SelectionSort(std::unordered_map<int, std::pair<std::string, in
 	//Selection Sort by highest playerScore
 	for (int a = 0; a < mp.size() - 1; a++) {
 		highestNum = a;
-		for (int b = a + 1; b < mp.size() - 1; b++) {
+		for (int b = a + 1; b <= mp.size() - 1; b++) {
 			if (mp[keySort[b]].second > mp[keySort[highestNum]].second) {
 				highestNum = b;
 			}
