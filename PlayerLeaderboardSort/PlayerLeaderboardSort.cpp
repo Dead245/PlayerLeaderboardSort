@@ -3,7 +3,7 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include <map>
+#include <unordered_map>
 
 #include "SelectionSort.h"
 #include "BubbleSort.h"
@@ -20,7 +20,7 @@
 void printMenu();
 void activateSort(int chosenSortMethod);
 
-std::map<int, std::pair<std::string,int>> playerMap; //int is playerID
+std::unordered_map<int, std::pair<std::string,int>> playerMap; //int is playerID
 
 std::vector<std::string> sortTypeList = { "Selection Sort",
                                           "Bubble Sort",
@@ -63,11 +63,6 @@ int main()
 
         playerMap[lineCount] = (playerID, playerStats);
     }
-    //testing if the map works correctly and ways to print it
-    auto element = playerMap[87].first; //[#] is playerID | .first gives playerName | .second gives playerScore
-    auto element2 = playerMap.find(87);
-    std::cout << element;
-    std::cout << element2->first;       //have to use -> to access since .find() gives an iterator
     
     playersFile.close();
 
@@ -85,7 +80,7 @@ int main()
 
     activateSort(choice);
 
-    printTable(playerMap); //temp for testing table print function
+    //printTable(playerMap); //temp for testing table print function
    
     system("pause");
 
@@ -105,9 +100,10 @@ void activateSort(int chosenSortMethod) { //What is a better way to do this? Wha
         std::cout << "Bad Input.";
         return;
     }
+    std::vector<int> sortedKeys;
     switch (chosenSortMethod) { //Activates corresponding sort method based on int input
     case 1:
-        SelectionSort();
+        sortedKeys = SelectionSort(playerMap);
         break;
     case 2:
         BubbleSort();

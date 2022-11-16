@@ -1,4 +1,4 @@
 #pragma once
-#include <map>
+#include <unordered_map>
 
-void printTable(std::map<int, std::pair<std::string, int>> mp);
+void printTable(std::unordered_map<int, std::pair<std::string, int>> mp);
