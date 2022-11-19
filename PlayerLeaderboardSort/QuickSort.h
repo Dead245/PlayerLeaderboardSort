@@ -1,2 +1,2 @@
 #pragma once
-void QuickSort();
+std::vector<int> QuickSort(std::unordered_map<int, std::pair<std::string, int>>& mp);

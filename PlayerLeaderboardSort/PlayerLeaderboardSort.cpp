@@ -111,7 +111,7 @@ void activateSort(int chosenSortMethod) { //What is a better way to do this? Wha
         sortedKeys = InsertionSort(playerMap);
         break;
     case 4:
-        QuickSort();
+        sortedKeys = QuickSort(playerMap);
         break;
     case 5:
         MergeSort();
