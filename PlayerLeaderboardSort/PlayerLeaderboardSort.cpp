@@ -107,7 +107,7 @@ void activateSort(int chosenSortMethod) { //What is a better way to do this? Wha
         sortedKeys = SelectionSort(playerMap);
         break;
     case 2:
-        BubbleSort();
+        sortedKeys = BubbleSort(playerMap);
         break;
     case 3:
         InsertionSort();
