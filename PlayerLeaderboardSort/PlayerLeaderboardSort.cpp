@@ -82,8 +82,6 @@ int main()
     activateSort(choice);
 
     printTable(playerMap,sortedKeys);
-   
-    system("pause");
 
     return 0;
 }
@@ -110,7 +108,7 @@ void activateSort(int chosenSortMethod) { //What is a better way to do this? Wha
         sortedKeys = BubbleSort(playerMap);
         break;
     case 3:
-        InsertionSort();
+        sortedKeys = InsertionSort(playerMap);
         break;
     case 4:
         QuickSort();
