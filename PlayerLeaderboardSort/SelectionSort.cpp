@@ -7,7 +7,7 @@
 #include "SelectionSort.h"
 
 //Creates a sorted vector of keys for the unordered_map using Selection Sort
-std::vector<int> SelectionSort(std::unordered_map<int, std::pair<std::string, int>> mp) {
+std::vector<int> SelectionSort(std::unordered_map<int, std::pair<std::string, int>> &mp) {
 	std::vector<int> keySort; //keys are the PlayerIDs - will be sorted by highest playerScore
 	int highestNum;
 
