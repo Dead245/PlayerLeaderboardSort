@@ -3,11 +3,11 @@
 #include <unordered_map>
 #include "QuickSort.h"
 
-void QuickSortRecursion(std::unordered_map<int, std::pair<std::string, int>>& mp, int low, int high);
+void QuickSortRecursion(std::unordered_map<int, std::pair<std::string, int>>& mp, std::vector<int>& keySort, int low, int high);
 
-std::vector<int> keySort; //keys are the PlayerIDs - will be sorted by highest playerScore
 
 std::vector<int> QuickSort(std::unordered_map<int, std::pair<std::string, int>>& mp) {
+	std::vector<int> keySort; //keys are the PlayerIDs - will be sorted by highest playerScore
 
 	//convert map keys into vector to use Quick Sort
 	for (auto item : mp) {
@@ -15,12 +15,12 @@ std::vector<int> QuickSort(std::unordered_map<int, std::pair<std::string, int>>&
 	}
 
 	//Quick Sort by highest playerScore
-	QuickSortRecursion(mp, 0, mp.size()-1);
+	QuickSortRecursion(mp, keySort, 0, mp.size() - 1);
 
 	return keySort;
 }
 
-void QuickSortRecursion(std::unordered_map<int, std::pair<std::string, int>>& mp, int low, int high) {
+void QuickSortRecursion(std::unordered_map<int, std::pair<std::string, int>>& mp, std::vector<int>& keySort, int low, int high) {
 	if (low >= high) {
 		return;
 	}
@@ -38,6 +38,6 @@ void QuickSortRecursion(std::unordered_map<int, std::pair<std::string, int>>& mp
 	std::swap(keySort[high], keySort[pivotIndex]);
 
 	//Recursion
-	QuickSortRecursion(mp,low, pivotIndex - 1);
-	QuickSortRecursion(mp, pivotIndex + 1,high);
+	QuickSortRecursion(mp, keySort, low, pivotIndex - 1);
+	QuickSortRecursion(mp, keySort, pivotIndex + 1, high);
 }
