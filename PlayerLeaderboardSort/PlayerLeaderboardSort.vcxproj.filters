@@ -33,7 +33,7 @@
     <ClCompile Include="MergeSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CountingSort.cpp">
+    <ClCompile Include="TimSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RadixSort.cpp">
@@ -68,7 +68,7 @@
     <ClInclude Include="MergeSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CountingSort.h">
+    <ClInclude Include="TimSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RadixSort.h">

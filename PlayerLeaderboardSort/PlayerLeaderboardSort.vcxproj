@@ -141,7 +141,7 @@
   <ItemGroup>
     <ClCompile Include="BucketSort.cpp" />
     <ClCompile Include="CombSort.cpp" />
-    <ClCompile Include="CountingSort.cpp" />
+    <ClCompile Include="TimSort.cpp" />
     <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="MergeSort.cpp" />
     <ClCompile Include="PlayerLeaderboardSort.cpp" />
@@ -156,7 +156,7 @@
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="BucketSort.h" />
     <ClInclude Include="CombSort.h" />
-    <ClInclude Include="CountingSort.h" />
+    <ClInclude Include="TimSort.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="MergeSort.h" />
     <ClInclude Include="QuickSort.h" />

@@ -10,7 +10,7 @@
 #include "InsertionSort.h"
 #include "QuickSort.h"
 #include "MergeSort.h"
-#include "CountingSort.h"
+#include "TimSort.h"
 #include "RadixSort.h"
 #include "BucketSort.h"
 #include "CombSort.h"
@@ -28,7 +28,7 @@ std::vector<std::string> sortTypeList = { "Selection Sort",
                                           "Insertion Sort",
                                           "Quick Sort",
                                           "Merge Sort",
-                                          "Counting Sort",
+                                          "Tim Sort",
                                           "Radix Sort",
                                           "Bucket Sort",
                                           "Comb Sort",
@@ -117,7 +117,7 @@ void activateSort(int chosenSortMethod) { //What is a better way to do this? Wha
         sortedKeys = MergeSort(playerMap);
         break;
     case 6:
-        CountingSort();
+        sortedKeys = TimSort(playerMap);
         break;
     case 7:
         RadixSort();
