@@ -9,8 +9,9 @@ The five sorting algorithms used are:
 - [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
 > *Links of Sorting Algorithms are to their corresponding Wikipedia entries.*
 ---
+Creates a `unordered_map<int, std::pair<std::string,int>>` called `playerMap` using information from the file.
 
-It does not sort the file itself, or the data pulled from the file. Instead, it will create a `vector<int>` of keys that are the sorted order, and then use that along with the original list of data from `PlayerList.txt` to print the sorted table.
+It does not sort the file itself, or the `playerMap`. Instead, it will create a `vector<int>` of `sortedKeys` that are the sorted order, and then use `playerMap` and `sortedKeys` to print the sorted table into the console.
 
 Once you've chosen a sort method through the menu in the console, it will print the sorted list as a table into the console.
 
