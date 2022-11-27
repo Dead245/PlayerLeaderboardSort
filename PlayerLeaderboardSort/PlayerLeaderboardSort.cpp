@@ -10,11 +10,6 @@
 #include "InsertionSort.h"
 #include "QuickSort.h"
 #include "MergeSort.h"
-#include "TimSort.h"
-#include "RadixSort.h"
-#include "BucketSort.h"
-#include "CombSort.h"
-#include "ShellSort.h"
 #include "TablePrint.h"
 
 void printMenu();
@@ -27,12 +22,7 @@ std::vector<std::string> sortTypeList = { "Selection Sort",
                                           "Bubble Sort",
                                           "Insertion Sort",
                                           "Quick Sort",
-                                          "Merge Sort",
-                                          "Tim Sort",
-                                          "Radix Sort",
-                                          "Bucket Sort",
-                                          "Comb Sort",
-                                          "Shell Sort" };
+                                          "Merge Sort" };
 
 int main()
 {
@@ -115,21 +105,6 @@ void activateSort(int chosenSortMethod) { //What is a better way to do this? Wha
         break;
     case 5:
         sortedKeys = MergeSort(playerMap);
-        break;
-    case 6:
-        sortedKeys = TimSort(playerMap);
-        break;
-    case 7:
-        RadixSort();
-        break;
-    case 8:
-        BucketSort();
-        break;
-    case 9:
-        CombSort();
-        break;
-    case 10:
-        ShellSort();
         break;
     }
     std::cout << "Sorting using " << sortTypeList[chosenSortMethod - 1] << "..." << std::endl;
