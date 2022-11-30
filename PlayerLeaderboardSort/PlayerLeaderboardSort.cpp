@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <unordered_map>
+#include <chrono>
 
 #include "SelectionSort.h"
 #include "BubbleSort.h"
@@ -11,6 +12,8 @@
 #include "QuickSort.h"
 #include "MergeSort.h"
 #include "TablePrint.h"
+
+using namespace std::chrono;
 
 void printMenu();
 void activateSort(int chosenSortMethod);
@@ -69,9 +72,16 @@ int main()
     
     system("CLS"); //Clears the console window
 
+    //Using chrono in the main cpp allows simplicity, but is understood that the activateSort() and its switch statement will add to the time.
+    auto chronoOld = steady_clock::now();
+
     activateSort(choice);
 
+    auto chronoDuration = steady_clock::now() - chronoOld;
+
     printTable(playerMap,sortedKeys);
+
+    std::cout << "\nDuration of Sort: " << duration_cast<microseconds>(chronoDuration).count() << " microseconds\n";
 
     return 0;
 }
