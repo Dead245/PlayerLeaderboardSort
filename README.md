@@ -1,7 +1,9 @@
 # Player Leaderboard Sort - Console Application
-Reads `PlayerList.txt` (created through ['Random Players - File Creator'](https://github.com/Dead245/Random-Players---File-Creator)) and allows user to use 1 of 5 different sorting algorithms to sort it
-<img alt="Snippet of what the console looks like once a sorting algorithm is chosen." src="images/PlayerSortConsoleImage.png" width="30%">
+Reads `PlayerList.txt` (created through ['Random Players - File Creator'](https://github.com/Dead245/Random-Players---File-Creator)) and allows user to use 1 of 5 different sorting algorithms to sort by player score.
+<p align="center">
+<img alt="Snippet of what the console looks like once a sorting algorithm is chosen." src="images/PlayerSortConsoleImage.png">
 </p>
+
 The five sorting algorithms used are:
 - [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort)
 - [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
